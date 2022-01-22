@@ -22,15 +22,15 @@ document.querySelector('form').addEventListener("submit", function(event) {
     }
     if (user_input == number) {
         target.classList.add("success")
-        target.innerHTML = "Nice one, number of try : " + numberTry + "/20"
+        target.innerHTML = "Nice one, number of try : " + numberTry + "/20, the number was : " + number
     }
     if (numberTry >= 20 && user_input != number) {
         target.classList.add("error")
-        target.innerHTML = "Big noob u loose, no more try, the number was : " + number
+        target.innerHTML = "No more try, the number was : " + number
     }
     if (numberTry == 20 && user_input == number) {
         target.classList.add("success")
-        target.innerHTML = "What a move ! Faker, last try" + numberTry + "/20"
+        target.innerHTML = "What a move ! From the last try" + numberTry + "/20"
     }
 
 });
