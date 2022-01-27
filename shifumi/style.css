@@ -1,0 +1,47 @@
+@font-face {
+    font-family: "Mochiy";
+    src: url(fonts/Mochiy.ttf) format("truetype");
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    min-height: 100vh;
+    background-color: #30343f;
+}
+
+header {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+header h1 {
+    font-family: "Mochiy";
+    color: #fff;
+    font-size: 4em;
+}
+
+.header_button {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    width: 100%;
+}
+
+header a {
+    margin-top: 10px;
+    padding: 10px;
+    border-radius: 5px;
+    background-color: #8d99ae;
+    text-decoration: none;
+    font-weight: bold;
+    color: #edf2f4;
+}
+
+header a:active {
+    background-color: #545b66;
+}
