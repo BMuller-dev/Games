@@ -11,36 +11,40 @@
 </head>
 
 <body>
+
     <header>
         <h1>Shifumi</h1>
         <div class="header_button">
-            <a class="solo_mode" href="#">1P</a>
+            <a class="solo_mode active" href="#">1P</a>
             <a class="duo_mode" href="#">2P</a>
         </div>
     </header>
+
+    <section class="explain">
+        La plus forte des formes l'emporte et le joueur marque le point gagnant. Si les deux joueurs utilisent la même forme c'est un match nul.
+    </section>
+
     <main>
+
         <section class="player">
-            <h1>Player 1 </h1>
-            <img src="img/rock.png">
-
-
-
+            <h1>Player 1</h1>
+            <p class="win_streak">Unstoppable!</p>
+            <img id="player_img" src="" />
         </section>
+
         <section class="mid">
             <h1 class="countdown">3</h1>
             <a class="restart">Restart</a>
-
-
-
         </section>
 
         <section class="bot">
             <h1>AI</h1>
-            <img src="img/scissor.png">
-
-
+            <p class="win_streak"></p>
+            <img src="img/scissor.png" />
         </section>
+
     </main>
+
     <div class="choix">
         <div class="button">
             <a class="rock">Pierre</a>
@@ -49,9 +53,6 @@
         </div>
     </div>
 
-
 </body>
-
-
 
 </html>

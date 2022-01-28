@@ -3,6 +3,11 @@
     src: url(fonts/Mochiy.ttf) format("truetype");
 }
 
+@font-face {
+    font-family: "Architects";
+    src: url(fonts/Architects.ttf) format("truetype");
+}
+
 * {
     margin: 0;
     padding: 0;
@@ -11,6 +16,7 @@
 body {
     min-height: 100vh;
     background-color: #30343f;
+    overflow: hidden;
 }
 
 header {
@@ -42,12 +48,20 @@ header a {
     color: #edf2f4;
 }
 
-header a:active {
+header a:active,
+.active {
     background-color: #545b66;
 }
 
 
 /* MAIN */
+
+.explain {
+    color: #fff;
+    text-align: center;
+    margin-top: 10px;
+    font-weight: bold;
+}
 
 main {
     display: grid;
@@ -58,19 +72,47 @@ main {
     color: #fff;
 }
 
+.choix .button a:active,
+.mid a:active {
+    background-color: #545b66;
+}
+
 .player {
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
     text-align: center;
+    align-content: flex-start;
 }
 
 .player h1,
 .bot h1 {
-    font-size: 2em;
-    font-weight: 400;
+    font-size: 32px;
     width: 100%;
-    margin-bottom: 50px;
+}
+
+.player p,
+.bot p {
+    width: 100%;
+    font-size: 1.5em;
+    font-family: "Architects";
+    margin-bottom: 10px;
+    animation: WinStreak 1s infinite;
+}
+
+.player img,
+.bot img {
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    pointer-events: none;
+}
+
+@keyframes WinStreak {
+    10% {
+        transform: scale(1.1);
+    }
 }
 
 .mid {
