@@ -169,3 +169,13 @@ main {
 .button {
     visibility: visible;
 }
+
+.rock,
+.paper,
+.scissor,
+.restart {
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}

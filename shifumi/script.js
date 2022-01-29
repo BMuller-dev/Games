@@ -17,19 +17,19 @@ let player_choice;
 let rock = document.querySelector(".rock");
 rock.addEventListener("click", function() {
     player_img.src = "img/rock.png";
-    player_choice = 0;
+    player_choice = 1;
 });
 
 let paper = document.querySelector(".paper");
 paper.addEventListener("click", function() {
     player_img.src = "img/paper.png";
-    player_choice = 1;
+    player_choice = 2;
 });
 
 let scissor = document.querySelector(".scissor");
 scissor.addEventListener("click", function() {
     player_img.src = "img/scissor.png";
-    player_choice = 2;
+    player_choice = 3;
 });
 
 let player_points = 0;
@@ -39,19 +39,18 @@ let button = document.querySelector(".button");
 button.addEventListener("click", function() {
     button.style.visibility = "hidden";
 
-    let bot_choice = Math.floor(Math.random() * (2 - 0) + 0);
+    let bot_choice = Math.floor(Math.random() * (4 - 1) + 1);
 
-
-    if (bot_choice == 0) {
+    if (bot_choice == 1) {
         bot_img.src = "img/rock.png";
     }
-    if (bot_choice == 1) {
+    if (bot_choice == 2) {
         bot_img.src = "img/paper.png";
     }
-    if (bot_choice == 2) {
+    if (bot_choice == 3) {
         bot_img.src = "img/scissor.png";
     }
-    console.log(player_choice - bot_choice % 3)
+
     restart.style.visibility = "visible";
     if (player_choice - bot_choice % 3 == 1) {
         state.textContent = "Victory";
