@@ -68,7 +68,7 @@ let player_point = document.querySelector('.player');
 let bot_point = document.querySelector('.bot');
 
 function points() {
-    player_point.textContent = "Player 1 has " + player_points + " points.";
+    player_point.textContent = "Player has " + player_points + " points.";
     bot_point.textContent = "AI has " + bot_points + " points."
 
 }
