@@ -2,6 +2,14 @@ let player_img = document.querySelector("#player_img");
 let bot_img = document.querySelector("#bot_img");
 let state = document.querySelector('.state');
 
+let win_streak_bot = document.querySelector('.win_streak_bot');
+let win_streak_player = document.querySelector('.win_streak_player');
+
+let slogan = ["", "", "Killing spree", "Rampage", "Unstoppable", "Dominating", "Godlike", "Legendary"]
+
+let x = 0
+let y = 0
+
 let restart = document.querySelector('.restart');
 
 restart.addEventListener('click', function() {
@@ -55,11 +63,15 @@ button.addEventListener("click", function() {
     if (player_choice - bot_choice % 3 == 1) {
         state.textContent = "Victory";
         player_points++
+        x++
+        y = 0
     } else if (player_choice == bot_choice) {
         state.textContent = "Draw";
     } else {
         state.textContent = "Defeat";
         bot_points++
+        y++
+        x = 0
     }
     points();
 });
@@ -69,6 +81,7 @@ let bot_point = document.querySelector('.bot');
 
 function points() {
     player_point.textContent = "Player has " + player_points + " points.";
-    bot_point.textContent = "AI has " + bot_points + " points."
-
+    bot_point.textContent = "AI has " + bot_points + " points.";
+    win_streak_player.textContent = slogan[x];
+    win_streak_bot.textContent = slogan[y];
 }
