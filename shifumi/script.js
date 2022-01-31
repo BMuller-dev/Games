@@ -82,6 +82,11 @@ let bot_point = document.querySelector('.bot');
 function points() {
     player_point.textContent = "Player has " + player_points + " points.";
     bot_point.textContent = "AI has " + bot_points + " points.";
-    win_streak_player.textContent = slogan[x];
-    win_streak_bot.textContent = slogan[y];
+    if (x > 7 || y > 7) {
+        win_streak_player.textContent = slogan[7];
+        win_streak_bot.textContent = slogan[7];
+    } else {
+        win_streak_player.textContent = slogan[x];
+        win_streak_bot.textContent = slogan[y];
+    }
 }
