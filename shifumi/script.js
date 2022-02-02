@@ -59,6 +59,7 @@ button.addEventListener("click", function() {
         bot_img.src = "img/scissor.png";
     }
 
+
     restart.style.visibility = "visible";
     if (player_choice - bot_choice % 3 == 1) {
         state.textContent = "Victory";
