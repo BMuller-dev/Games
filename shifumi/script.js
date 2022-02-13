@@ -74,6 +74,7 @@ button.addEventListener("click", function() {
         y++
         x = 0
     }
+    console.log(y)
     points();
 });
 
@@ -83,11 +84,12 @@ let bot_point = document.querySelector('.bot');
 function points() {
     player_point.textContent = "Player has " + player_points + " points.";
     bot_point.textContent = "AI has " + bot_points + " points.";
-    if (x > 7 || y > 7) {
-        win_streak_player.textContent = slogan[7];
-        win_streak_bot.textContent = slogan[7];
-    } else {
-        win_streak_player.textContent = slogan[x];
-        win_streak_bot.textContent = slogan[y];
+    win_streak_player.textContent = slogan[x];
+    win_streak_bot.textContent = slogan[y];
+    if (y > 7) {
+        win_streak_bot.textContent = slogan[slogan.length - 1];
+    }
+    if (x > 7) {
+        win_streak_player.textContent = slogan[slogan.length - 1];
     }
 }
